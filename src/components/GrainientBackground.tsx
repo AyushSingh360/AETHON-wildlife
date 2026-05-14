@@ -130,17 +130,17 @@ export function GrainientBackground({
           "--grainient-warp-strength": warpStrength,
           "--grainient-warp-duration": `${warpDuration}s`,
           "--grainient-saturation": saturation,
-          background: `
-            radial-gradient(
-              ellipse 120% 120% at var(--grainient-center-x, 50%) var(--grainient-center-y, 50%),
-              var(--grainient-color1, #456614) 0%,
-              var(--grainient-color2, #212022) 40%,
-              var(--grainient-color3, #84CC16) 75%,
-              var(--grainient-color1, #456614) 100%
-            )
-          `,
-        }
-        aria-hidden="true"
+background: `
+             radial-gradient(
+               ellipse 120% 120% at var(--grainient-center-x, 50%) var(--grainient-center-y, 50%),
+               var(--grainient-color1, #456614) 0%,
+               var(--grainient-color2, #212022) 40%,
+               var(--grainient-color3, #84CC16) 75%,
+               var(--grainient-color1, #456614) 100%
+             )
+           `,
+          }}
+          aria-hidden="true"
       >
         {/* Warping distortion pseudo-element using animated gradients */}
         <div
