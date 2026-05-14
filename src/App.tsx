@@ -58,9 +58,9 @@ export function App() {
   return (
     <>
       <GrainientBackground
-        color1="#162367"
+        color1="#456614"
         color2="#212022"
-        color3="#888888"
+        color3="#84CC16"
         saturation={2.5}
         noiseScale={2.05}
         timeSpeed={0.5}
@@ -68,6 +68,18 @@ export function App() {
         gamma={0.65}
         grainScale={5.3}
         grainAmount={0.14}
+        contrast={1.5}
+        warpStrength={1}
+        warpFrequency={5}
+        warpSpeed={2}
+        warpAmplitude={50}
+        blendAngle={0}
+        blendSoftness={0.05}
+        rotationAmount={500}
+        centerX={0}
+        centerY={0}
+        zoom={0.9}
+        grainAnimated={false}
       />
       <SkipLink />
       <CustomCursor />
