@@ -125,10 +125,10 @@ export function ConservationStats() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: `
-            radial-gradient(ellipse 100% 70% at 50% 50%, oklch(0.12 0.06 155 / 0.3) 0%, transparent 60%),
-            linear-gradient(180deg, oklch(0.06 0.012 165) 0%, oklch(0.04 0.01 165) 100%)
-          `,
+background: `
+             radial-gradient(ellipse 100% 70% at 50% 50%, oklch(0.12 0.06 155 / 0.15) 0%, transparent 60%),
+             linear-gradient(180deg, oklch(0.06 0.012 165 / 0.2) 0%, oklch(0.04 0.01 165 / 0.1) 100%)
+           `,
         }}
       />
 

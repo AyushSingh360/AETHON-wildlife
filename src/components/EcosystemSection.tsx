@@ -64,10 +64,10 @@ export function EcosystemSection() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: `
-            radial-gradient(ellipse 80% 60% at 30% 50%, oklch(0.15 0.08 155 / 0.25) 0%, transparent 60%),
-            linear-gradient(180deg, oklch(0.06 0.012 165) 0%, oklch(0.05 0.01 165) 100%)
-          `,
+background: `
+             radial-gradient(ellipse 80% 60% at 30% 50%, oklch(0.15 0.08 155 / 0.15) 0%, transparent 60%),
+             linear-gradient(180deg, oklch(0.06 0.012 165 / 0.2) 0%, oklch(0.05 0.01 165 / 0.1) 100%)
+           `,
         }}
       />
 

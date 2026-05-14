@@ -219,11 +219,11 @@ export function BreedingPrograms() {
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none"
         style={{
-          background: `
-            radial-gradient(ellipse 85% 60% at 50% 40%, oklch(0.18 0.1 155 / 0.2) 0%, transparent 55%),
-            radial-gradient(ellipse 50% 40% at 20% 80%, oklch(0.15 0.08 165 / 0.15) 0%, transparent 50%),
-            linear-gradient(180deg, oklch(0.06 0.012 165) 0%, oklch(0.04 0.01 165) 100%)
-          `,
+background: `
+             radial-gradient(ellipse 85% 60% at 50% 40%, oklch(0.18 0.1 155 / 0.12) 0%, transparent 55%),
+             radial-gradient(ellipse 50% 40% at 20% 80%, oklch(0.15 0.08 165 / 0.1) 0%, transparent 50%),
+             linear-gradient(180deg, oklch(0.06 0.012 165 / 0.15) 0%, oklch(0.04 0.01 165 / 0.08) 100%)
+           `,
         }}
       />
       <div className="fog-layer pointer-events-none" style={{ zIndex: 0 }} />

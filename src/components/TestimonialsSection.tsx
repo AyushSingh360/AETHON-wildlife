@@ -64,10 +64,10 @@ export function TestimonialsSection() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: `
-            radial-gradient(ellipse 80% 60% at 50% 50%, oklch(0.12 0.05 165 / 0.4) 0%, transparent 60%),
-            linear-gradient(180deg, oklch(0.05 0.01 165) 0%, oklch(0.06 0.012 165) 100%)
-          `,
+background: `
+             radial-gradient(ellipse 80% 60% at 50% 50%, oklch(0.12 0.05 165 / 0.25) 0%, transparent 60%),
+             linear-gradient(180deg, oklch(0.05 0.01 165 / 0.15) 0%, oklch(0.06 0.012 165 / 0.1) 100%)
+           `,
         }}
       />
 

@@ -168,9 +168,9 @@ export function FieldResearch() {
       <div className="absolute inset-0 pointer-events-none"
         style={{
           background: `
-            radial-gradient(ellipse 80% 65% at 50% 35%, oklch(0.15 0.08 165 / 0.2) 0%, transparent 55%),
-            radial-gradient(ellipse 60% 40% at 80% 75%, oklch(0.12 0.06 150 / 0.15) 0%, transparent 50%),
-            linear-gradient(180deg, oklch(0.06 0.012 165) 0%, oklch(0.04 0.01 165) 100%)
+            radial-gradient(ellipse 80% 65% at 50% 35%, oklch(0.15 0.08 165 / 0.12) 0%, transparent 55%),
+            radial-gradient(ellipse 60% 40% at 80% 75%, oklch(0.12 0.06 150 / 0.08) 0%, transparent 50%),
+            linear-gradient(180deg, oklch(0.06 0.012 165 / 0.15) 0%, oklch(0.04 0.01 165 / 0.08) 100%)
           `,
         }}
       />

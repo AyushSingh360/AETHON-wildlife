@@ -240,9 +240,9 @@ export function HabitatRestoration() {
       <div className="absolute inset-0 pointer-events-none"
         style={{
           background: `
-            radial-gradient(ellipse 90% 60% at 60% 30%, oklch(0.2 0.08 155 / 0.2) 0%, transparent 50%),
-            radial-gradient(ellipse 50% 50% at 30% 80%, oklch(0.1 0.06 170 / 0.15) 0%, transparent 50%),
-            linear-gradient(180deg, oklch(0.06 0.012 165) 0%, oklch(0.04 0.01 165) 100%)
+            radial-gradient(ellipse 90% 60% at 60% 30%, oklch(0.2 0.08 155 / 0.12) 0%, transparent 50%),
+            radial-gradient(ellipse 50% 50% at 30% 80%, oklch(0.1 0.06 170 / 0.08) 0%, transparent 50%),
+            linear-gradient(180deg, oklch(0.06 0.012 165 / 0.15) 0%, oklch(0.04 0.01 165 / 0.08) 100%)
           `,
         }}
       />

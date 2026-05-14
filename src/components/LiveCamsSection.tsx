@@ -220,7 +220,7 @@ export function LiveCamsSection() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: "linear-gradient(180deg, oklch(0.05 0.01 165) 0%, oklch(0.07 0.04 165) 50%, oklch(0.05 0.01 165) 100%)",
+          background: "linear-gradient(180deg, oklch(0.05 0.01 165 / 0.3) 0%, oklch(0.07 0.04 165 / 0.2) 50%, oklch(0.05 0.01 165 / 0.3) 100%)",
         }}
       />
 

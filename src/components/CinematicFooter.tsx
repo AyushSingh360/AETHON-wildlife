@@ -72,10 +72,10 @@ export function CinematicFooter() {
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: `
-              radial-gradient(ellipse 80% 60% at 50% 100%, oklch(0.15 0.08 150 / 0.2) 0%, transparent 60%),
-              linear-gradient(180deg, oklch(0.05 0.01 165) 0%, oklch(0.04 0.01 165) 100%)
-            `,
+background: `
+               radial-gradient(ellipse 80% 60% at 50% 100%, oklch(0.15 0.08 150 / 0.12) 0%, transparent 60%),
+               linear-gradient(180deg, oklch(0.05 0.01 165 / 0.15) 0%, oklch(0.04 0.01 165 / 0.1) 100%)
+             `,
           }}
         />
 

@@ -55,22 +55,22 @@ export function ScrollStory() {
   return (
     <section ref={sectionRef} className="relative" style={{ minHeight: "300vh" }}>
       <div className="sticky top-0 h-screen overflow-hidden">
-        {/* Dynamic background */}
-        <motion.div
-          className="absolute inset-0"
-          style={{
-            background: `
-              radial-gradient(ellipse 70% 50% at 50% 30%,
-                oklch(0.2 0.1 155 / 0.6) 0%, transparent 60%),
-              linear-gradient(180deg,
-                oklch(0.05 0.015 165) 0%,
-                oklch(0.1 0.06 158) 40%,
-                oklch(0.06 0.03 162) 70%,
-                oklch(0.04 0.01 165) 100%
-              )
-            `,
-          }}
-        />
+{/* Dynamic background - translucent */}
+         <motion.div
+           className="absolute inset-0"
+           style={{
+             background: `
+               radial-gradient(ellipse 70% 50% at 50% 30%,
+                 oklch(0.2 0.1 155 / 0.35) 0%, transparent 60%),
+               linear-gradient(180deg,
+                 oklch(0.05 0.015 165 / 0.2) 0%,
+                 oklch(0.1 0.06 158 / 0.25) 40%,
+                 oklch(0.06 0.03 162 / 0.2) 70%,
+                 oklch(0.04 0.01 165 / 0.1) 100%
+               )
+             `,
+           }}
+         />
 
         {/* Daylight layer */}
         <motion.div
