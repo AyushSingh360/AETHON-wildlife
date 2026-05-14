@@ -5,6 +5,7 @@ import { HeroSection } from "@/components/HeroSection"
 import { ErrorBoundary } from "@/components/ErrorBoundary"
 import { SectionLoader } from "@/components/SectionLoader"
 import { SkipLink } from "@/components/SkipLink"
+import { GrainientBackground } from "@/components/GrainientBackground"
 
 const ScrollStory = lazy(() =>
   import("@/components/ScrollStory").then((m) => ({ default: m.ScrollStory }))
@@ -33,6 +34,18 @@ const TestimonialsSection = lazy(() =>
 const CinematicFooter = lazy(() =>
   import("@/components/CinematicFooter").then((m) => ({ default: m.CinematicFooter }))
 )
+const SpeciesList = lazy(() =>
+  import("@/components/SpeciesList").then((m) => ({ default: m.SpeciesList }))
+)
+const BreedingPrograms = lazy(() =>
+  import("@/components/BreedingPrograms").then((m) => ({ default: m.BreedingPrograms }))
+)
+const HabitatRestoration = lazy(() =>
+  import("@/components/HabitatRestoration").then((m) => ({ default: m.HabitatRestoration }))
+)
+const FieldResearch = lazy(() =>
+  import("@/components/FieldResearch").then((m) => ({ default: m.FieldResearch }))
+)
 
 export function App() {
   useEffect(() => {
@@ -44,6 +57,18 @@ export function App() {
 
   return (
     <>
+      <GrainientBackground
+        color1="#162367"
+        color2="#212022"
+        color3="#888888"
+        saturation={2.5}
+        noiseScale={2.05}
+        timeSpeed={0.5}
+        colorBalance={-0.25}
+        gamma={0.65}
+        grainScale={5.3}
+        grainAmount={0.14}
+      />
       <SkipLink />
       <CustomCursor />
       <Navigation />
@@ -82,6 +107,26 @@ export function App() {
         <ErrorBoundary>
           <Suspense fallback={<SectionLoader />}>
             <LiveCamsSection />
+          </Suspense>
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Suspense fallback={<SectionLoader />}>
+            <SpeciesList />
+          </Suspense>
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Suspense fallback={<SectionLoader />}>
+            <BreedingPrograms />
+          </Suspense>
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Suspense fallback={<SectionLoader />}>
+            <HabitatRestoration />
+          </Suspense>
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Suspense fallback={<SectionLoader />}>
+            <FieldResearch />
           </Suspense>
         </ErrorBoundary>
         <ErrorBoundary>

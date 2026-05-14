@@ -6,6 +6,10 @@ const navLinks = [
   { label: "Wildlife", href: "#wildlife" },
   { label: "Ecosystem", href: "#ecosystem" },
   { label: "Conservation", href: "#conservation" },
+  { label: "Species", href: "#species" },
+  { label: "Breeding", href: "#breeding" },
+  { label: "Restoration", href: "#restoration" },
+  { label: "Research", href: "#research" },
   { label: "Live Cams", href: "#livecams" },
   { label: "Donate", href: "#donate" },
 ]
