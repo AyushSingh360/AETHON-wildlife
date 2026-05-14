@@ -327,31 +327,42 @@ export function LiveCamsSection() {
           </motion.div>
         </div>
 
-        {/* Cam grid thumbnails */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {CAMS.map((cam, i) => (
-            <motion.button
-              key={cam.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
-              onClick={() => setActiveCam(cam)}
-              className={`relative rounded-2xl overflow-hidden transition-all duration-300 ${
-                activeCam.id === cam.id ? "ring-1 ring-primary/60 scale-[1.02]" : "opacity-70 hover:opacity-100"
-              }`}
-              style={{ height: "120px" }}
-            >
-              <CamDisplay cam={cam} />
-              <div className="absolute inset-0 bg-background/20 flex items-end p-3">
-                <div className="text-left">
-                  <div className="text-[10px] font-bold text-foreground">{cam.name}</div>
-                  <div className="text-[9px] text-muted-foreground">{cam.viewers.toLocaleString()} watching</div>
-                </div>
-              </div>
-            </motion.button>
-          ))}
-        </div>
+{/* Camera thumbnails */}
+         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+           {CAMS.map((cam, i) => (
+             <motion.button
+               key={cam.id}
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               transition={{ delay: i * 0.08 }}
+               onClick={() => setActiveCam(cam)}
+               className={`relative rounded-2xl overflow-hidden transition-all duration-300 ${
+                 activeCam.id === cam.id
+                   ? "ring-1 ring-primary/60 scale-[1.02]"
+                   : "opacity-70 hover:opacity-100"
+               }`}
+               style={{ height: "160px" }}
+             >
+               {/* Scale the full-size CamDisplay down to fit the thumbnail */}
+               <div className="absolute inset-0 scale-[0.44] origin-top-left">
+                 <CamDisplay cam={cam} />
+               </div>
+
+               {/* Label overlay */}
+               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-3">
+                 <div className="text-left">
+                   <div className="text-[10px] font-bold text-foreground">
+                     {cam.name}
+                   </div>
+                   <div className="text-[9px] text-muted-foreground">
+                     {cam.viewers.toLocaleString()} watching
+                   </div>
+                 </div>
+               </div>
+             </motion.button>
+           ))}
+         </div>
       </div>
     </section>
   )
