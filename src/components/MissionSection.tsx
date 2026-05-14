@@ -65,16 +65,16 @@ export function MissionSection() {
 
   return (
     <section ref={ref} id="mission" className="relative py-32 px-6 overflow-hidden">
-      {/* BG */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: `
-            radial-gradient(ellipse 60% 50% at 80% 50%, oklch(0.18 0.08 150 / 0.3) 0%, transparent 60%),
-            linear-gradient(180deg, oklch(0.06 0.012 165) 0%, oklch(0.08 0.04 160) 50%, oklch(0.06 0.012 165) 100%)
-          `,
-        }}
-      />
+{/* BG */}
+       <div
+         className="absolute inset-0 pointer-events-none"
+         style={{
+           background: `
+             radial-gradient(ellipse 60% 50% at 80% 50%, oklch(0.18 0.08 150 / 0.15) 0%, transparent 60%),
+             linear-gradient(180deg, oklch(0.06 0.012 165 / 0.3) 0%, oklch(0.08 0.04 160 / 0.2) 50%, oklch(0.06 0.012 165 / 0.3) 100%)
+           `,
+         }}
+       />
 
       <div className="relative max-w-[1400px] mx-auto">
         {/* Header */}

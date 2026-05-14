@@ -173,29 +173,29 @@ export function HeroSection() {
       onClick={handleClick}
       id="hero"
     >
-      {/* Deep jungle background */}
-      <motion.div
-        className="absolute inset-0 camera-zoom"
-        style={{ scale: heroScale }}
-      >
-        {/* Base dark jungle gradient */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background: `
-              radial-gradient(ellipse 80% 60% at 50% 30%, oklch(0.18 0.1 155 / 0.8) 0%, transparent 60%),
-              radial-gradient(ellipse 60% 50% at 20% 70%, oklch(0.12 0.08 160 / 0.9) 0%, transparent 50%),
-              radial-gradient(ellipse 50% 40% at 80% 60%, oklch(0.14 0.09 150 / 0.7) 0%, transparent 50%),
-              linear-gradient(180deg,
-                oklch(0.04 0.01 165) 0%,
-                oklch(0.08 0.05 158) 20%,
-                oklch(0.12 0.08 155) 45%,
-                oklch(0.06 0.04 160) 70%,
-                oklch(0.03 0.01 165) 100%
-              )
-            `,
-          }}
-        />
+{/* Deep jungle background - translucent so GrainientBackground shows through */}
+       <motion.div
+         className="absolute inset-0 camera-zoom"
+         style={{ scale: heroScale, opacity: 0.85 }}
+       >
+         {/* Base dark jungle gradient */}
+         <div
+           className="absolute inset-0"
+           style={{
+             background: `
+               radial-gradient(ellipse 80% 60% at 50% 30%, oklch(0.18 0.1 155 / 0.5) 0%, transparent 60%),
+               radial-gradient(ellipse 60% 50% at 20% 70%, oklch(0.12 0.08 160 / 0.55) 0%, transparent 50%),
+               radial-gradient(ellipse 50% 40% at 80% 60%, oklch(0.14 0.09 150 / 0.4) 0%, transparent 50%),
+               linear-gradient(180deg,
+                 oklch(0.04 0.01 165 / 0.3) 0%,
+                 oklch(0.08 0.05 158 / 0.4) 20%,
+                 oklch(0.12 0.08 155 / 0.35) 45%,
+                 oklch(0.06 0.04 160 / 0.25) 70%,
+                 oklch(0.03 0.01 165 / 0.15) 100%
+               )
+             `,
+           }}
+         />
 
         {/* Jungle tree silhouettes - left */}
         <div
