@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Search, Filter, ChevronDown, Microscope, Users, MapPin, Clock, Award, Sparkles } from "lucide-react"
+import { Search, ChevronDown, Microscope, Users, MapPin, Clock, Award, Sparkles } from "lucide-react"
 
 const RESEARCH_DATA = [
   {

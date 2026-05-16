@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Search, Filter, ChevronDown, AlertTriangle, CheckCircle, Clock } from "lucide-react"
+import { Search, ChevronDown, AlertTriangle, CheckCircle, Clock } from "lucide-react"
 
 const SPECIES_DATA = [
   { id: "tiger-bengal", name: "Bengal Tiger", scientific: "Panthera tigris tigris", status: "endangered", population: 2500, trend: "increasing", habitat: "Tropical Rainforest", icon: "🐯" },

@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Search, Filter, ChevronDown, HeartPulse, Baby, Dna, Sparkles, CheckCircle } from "lucide-react"
+import { Search, ChevronDown, HeartPulse, Baby, Dna, Sparkles, CheckCircle } from "lucide-react"
 
 const PROGRAMS_DATA = [
   {

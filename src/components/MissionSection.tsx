@@ -150,14 +150,14 @@ export function MissionSection() {
               {/* Icon */}
               <div
                 className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110"
-                style={{
-                  background: `${pillar.color} / 0.12)`,
-                  border: `1px solid ${pillar.color} / 0.3)`,
-                  color: pillar.color,
-                  backgroundColor: `oklch(from ${pillar.color} l c h / 0.12)`,
-                  borderColor: `oklch(from ${pillar.color} l c h / 0.3)`,
-                  boxShadow: `0 0 30px ${pillar.color.replace(")", " / 0.15)")}`,
-                }}
+style={{
+                      background: `${pillar.color} / 0.12`,
+                      border: `1px solid ${pillar.color} / 0.3`,
+                      color: pillar.color,
+                      backgroundColor: `${pillar.color} / 0.12`,
+                      borderColor: `${pillar.color} / 0.3`,
+                      boxShadow: `0 0 30px ${pillar.color.replace(")", " / 0.15)")}`,
+                    }}
               >
                 {pillar.icon}
               </div>
