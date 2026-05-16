@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
 const CAMS = [
@@ -76,37 +76,37 @@ function ScanlineEffect() {
   )
 }
 
-function CamDisplay({ cam }: { cam: typeof CAMS[0] }) {
+function CamDisplay({ cam, disableAnimations = false }: { cam: typeof CAMS[0]; disableAnimations?: boolean }) {
+  const bokehElements = useMemo(() => {
+    return Array.from({ length: 8 }).map(() => ({
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      size: Math.random() * 40 + 10,
+    }));
+  }, [cam.id, disableAnimations]);
   return (
     <div className="relative w-full h-full rounded-2xl overflow-hidden" style={{ background: cam.bgGradient }}>
-      <ScanlineEffect />
+      {!disableAnimations && <ScanlineEffect />}
 
       {/* Simulated cam content - ambient lighting effects */}
       <div className="absolute inset-0">
         {/* Bokeh lights */}
-        {Array.from({ length: 8 }, (_, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              width: Math.random() * 40 + 10,
-              height: Math.random() * 40 + 10,
-              background: `radial-gradient(circle, ${cam.accentColor}30 0%, transparent 70%)`,
-              filter: "blur(8px)",
-            }}
-            animate={{
-              opacity: [0.3, 0.7, 0.3],
-              scale: [0.9, 1.1, 0.9],
-            }}
-            transition={{
-              duration: Math.random() * 4 + 3,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
+{!disableAnimations && bokehElements.map((b, i) => (
+        <motion.div
+          key={i}
+          className="absolute rounded-full"
+          style={{
+            left: b.left,
+            top: b.top,
+            width: b.size,
+            height: b.size,
+            background: `radial-gradient(circle, ${cam.accentColor}30 0%, transparent 70%)`,
+            filter: "blur(8px)",
+          }}
+          animate={disableAnimations ? undefined : { opacity: [0.3, 0.7, 0.3], scale: [0.9, 1.1, 0.9] }}
+          transition={disableAnimations ? undefined : { duration: Math.random() * 4 + 3, repeat: Infinity, delay: Math.random() * 2 }}
+        />
+      ))}
 
         {/* Silhouette suggestion */}
         <div
@@ -345,9 +345,7 @@ export function LiveCamsSection() {
                style={{ height: "160px" }}
              >
                {/* Scale the full-size CamDisplay down to fit the thumbnail */}
-               <div className="absolute inset-0 scale-[0.44] origin-top-left">
-                 <CamDisplay cam={cam} />
-               </div>
+<div className="absolute inset-0 rounded-2xl" style={{ background: cam.bgGradient }} />
 
                {/* Label overlay */}
                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-3">

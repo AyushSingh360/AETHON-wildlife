@@ -235,6 +235,22 @@ body {
 
 /* ===== UTILITY CLASSES ===== */
 
+/* Disable background animations for static experience */
+.fog-layer,
+.fog-layer-2,
+.fog-layer-3,
+.volumetric-ray,
+.hover-float,
+.aurora,
+.camera-zoom,
+.glow-gold,
+.glow-text,
+.glow-pulse,
+.morph-border,
+.scanline-effect {
+  animation: none !important;
+}
+
 .text-gold {
   color: oklch(0.78 0.14 82);
 }
