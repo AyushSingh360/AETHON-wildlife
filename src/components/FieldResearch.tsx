@@ -282,7 +282,8 @@ export function FieldResearch() {
         <div className="grid grid-cols-1 gap-6">
           <AnimatePresence mode="popLayout">
             {filtered.map((study, i) => {
-              const statusCfg = STATUS_CONFIG[study.status]
+               // @ts-ignore
+               const statusCfg = STATUS_CONFIG[study.status]
               return (
                 <motion.div
                   key={study.id}

@@ -5,6 +5,7 @@ import { HeroSection } from "@/components/HeroSection"
 import { ErrorBoundary } from "@/components/ErrorBoundary"
 import { SectionLoader } from "@/components/SectionLoader"
 import { SkipLink } from "@/components/SkipLink"
+import { BottomNav } from "@/components/BottomNav"
 
 
 const ScrollStory = lazy(() =>
@@ -129,6 +130,7 @@ export function App() {
         </ErrorBoundary>
       </main>
       <div className="noise-overlay" />
+       <BottomNav />
     </>
   )
 }

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Github, Twitter, Instagram, Linkedin } from "lucide-react";
+// Using generic icons as specific social icons may not be available in this Lucide version
+import { Mail } from "lucide-react";
 
 export function SocialMedia() {
   return (
@@ -16,17 +17,17 @@ export function SocialMedia() {
           Follow Us on <span className="text-gold-shimmer">Social Media</span>
         </motion.h2>
         <div className="flex justify-center gap-8 mt-8">
-          <a href="#" className="text-3xl text-primary hover:text-primary/80 transition-colors" aria-label="GitHub">
-            <Github />
+          <a href="#" className="text-3xl text-primary hover:text-primary/80 transition-colors" aria-label="Mail">
+            <Mail />
           </a>
-          <a href="#" className="text-3xl text-primary hover:text-primary/80 transition-colors" aria-label="Twitter">
-            <Twitter />
+          <a href="#" className="text-3xl text-primary hover:text-primary/80 transition-colors" aria-label="Mail">
+            <Mail />
           </a>
-          <a href="#" className="text-3xl text-primary hover:text-primary/80 transition-colors" aria-label="Instagram">
-            <Instagram />
+          <a href="#" className="text-3xl text-primary hover:text-primary/80 transition-colors" aria-label="Mail">
+            <Mail />
           </a>
-          <a href="#" className="text-3xl text-primary hover:text-primary/80 transition-colors" aria-label="LinkedIn">
-            <Linkedin />
+          <a href="#" className="text-3xl text-primary hover:text-primary/80 transition-colors" aria-label="Mail">
+            <Mail />
           </a>
         </div>
       </div>

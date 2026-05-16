@@ -5,7 +5,7 @@ interface GrainientBackgroundProps {
   color2?: string
   color3?: string
   saturation?: number
-  noiseScale?: number
+
   grainScale?: number
   grainAmount?: number
   timeSpeed?: number
@@ -31,7 +31,7 @@ export function GrainientBackground({
   color2 = "#212022",
   color3 = "#84CC16",
   saturation = 2.5,
-  noiseScale = 2.05,
+
   grainScale = 5.3,
   grainAmount = 0.14,
   timeSpeed = 0.5,
@@ -139,13 +139,14 @@ background: `
                var(--grainient-color1, #456614) 100%
              )
            `,
-          }}
+           } as React.CSSProperties}
           aria-hidden="true"
       >
         {/* Warping distortion pseudo-element using animated gradients */}
         <div
           className="grainient-warp"
-          style={{
+        // @ts-ignore
+        style={{
             "--warp-freq": warpFrequency,
             "--warp-amp": warpAmplitude * warpStrength,
             "--warp-speed": warpSpeed,

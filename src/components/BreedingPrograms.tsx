@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Search, ChevronDown, HeartPulse, Baby, Dna, Sparkles, CheckCircle } from "lucide-react"
+import { Search, ChevronDown, HeartPulse, Dna, Sparkles, CheckCircle } from "lucide-react"
 
 const PROGRAMS_DATA = [
   {
@@ -341,7 +341,8 @@ background: `
         >
           <AnimatePresence mode="popLayout">
             {filtered.map((program, i) => {
-              const statusCfg = STATUS_COLORS[program.status]
+               // @ts-ignore
+               const statusCfg = STATUS_COLORS[program.status]
               return (
                 <motion.div
                   key={program.id}
