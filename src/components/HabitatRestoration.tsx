@@ -155,7 +155,7 @@ function ProjectCard({ project, index }: { project: typeof PROJECTS[0]; index: n
                 // @ts-ignore
                 style={{ color: STATUS_CONFIG[project.status].color, background: STATUS_CONFIG[project.status].bg, border: `1px solid ${STATUS_CONFIG[project.status].color}30` }}
             >
-               {/* @ts-ignore */}{STATUS_CONFIG[project.status].label}
+                {(STATUS_CONFIG as any)[project.status].label}
             </span>
           </div>
 
@@ -199,7 +199,7 @@ function ProjectCard({ project, index }: { project: typeof PROJECTS[0]; index: n
             </div>
                 // @ts-ignore
                 <span className="text-xs font-bold text-foreground min-w-[36px] text-right"
-              style={{ color: STATUS_CONFIG[project.status].color }}>
+              style={{ color: (STATUS_CONFIG as any)[project.status].color }}>
               {project.progress}%
             </span>
           </div>
