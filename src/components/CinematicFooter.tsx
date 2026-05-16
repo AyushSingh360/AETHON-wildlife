@@ -72,7 +72,7 @@ export function CinematicFooter() {
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-background: `
+            background: `
                radial-gradient(ellipse 80% 60% at 50% 100%, oklch(0.15 0.08 150 / 0.12) 0%, transparent 60%),
                linear-gradient(180deg, oklch(0.05 0.01 165 / 0.15) 0%, oklch(0.04 0.01 165 / 0.1) 100%)
              `,
@@ -363,7 +363,7 @@ background: `
           {/* Bottom bar */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-6 border-t border-border/30">
             <div className="text-[11px] text-muted-foreground text-center md:text-left">
-              © 2024 Aethon Wildlife Sanctuary. All rights reserved. A 501(c)(3) nonprofit organization.
+              © 2026 Aethon Wildlife Sanctuary. All rights reserved. A 501(c)(3) nonprofit organization.
             </div>
             <div className="flex flex-wrap items-center gap-6 justify-center">
               {["Privacy Policy", "Terms of Use", "Cookie Policy", "Accessibility"].map((link) => (
