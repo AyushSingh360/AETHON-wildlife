@@ -59,7 +59,7 @@ All heavy background animations are disabled by default to keep the experience b
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-user/wildlife.git
+git clone https://github.com/AyushSingh360/wildlife.git
 cd wildlife
 
 # Install dependencies (ci ensures a clean lockfile)
