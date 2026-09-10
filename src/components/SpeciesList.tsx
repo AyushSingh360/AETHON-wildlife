@@ -60,10 +60,18 @@ export function SpeciesList() {
   }, [search, statusFilter, habitatFilter])
 
   const stats = useMemo(() => {
-    const total = SPECIES_DATA.length
-    const endangered = SPECIES_DATA.filter((s) => s.status === "endangered" || s.status === "critically-endangered").length
-    const increasing = SPECIES_DATA.filter((s) => s.trend === "increasing").length
-    return { total, endangered, increasing }
+    return SPECIES_DATA.reduce(
+      (acc, s) => {
+        if (s.status === "endangered" || s.status === "critically-endangered") {
+          acc.endangered++
+        }
+        if (s.trend === "increasing") {
+          acc.increasing++
+        }
+        return acc
+      },
+      { total: SPECIES_DATA.length, endangered: 0, increasing: 0 }
+    )
   }, [])
 
   return (
