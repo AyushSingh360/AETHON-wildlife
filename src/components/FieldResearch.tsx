@@ -155,12 +155,25 @@ export function FieldResearch() {
     })
   }, [search, categoryFilter])
 
-  const stats = useMemo(() => ({
-    total: RESEARCH_DATA.length,
-    ongoing: RESEARCH_DATA.filter((r) => r.status === "ongoing").length,
-    completed: RESEARCH_DATA.filter((r) => r.status === "completed").length,
-    totalResearchers: RESEARCH_DATA.reduce((a, r) => a + r.teamSize, 0),
-  }), [])
+  const stats = useMemo(() => {
+    let ongoing = 0;
+    let completed = 0;
+    let totalResearchers = 0;
+
+    for (let i = 0; i < RESEARCH_DATA.length; i++) {
+      const r = RESEARCH_DATA[i];
+      if (r.status === "ongoing") ongoing++;
+      else if (r.status === "completed") completed++;
+      totalResearchers += r.teamSize;
+    }
+
+    return {
+      total: RESEARCH_DATA.length,
+      ongoing,
+      completed,
+      totalResearchers,
+    };
+  }, [])
 
   return (
     <section id="research" className="relative py-32 px-6 overflow-hidden min-h-screen">
