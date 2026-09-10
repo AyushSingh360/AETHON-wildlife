@@ -95,7 +95,8 @@ export function DonationSection() {
       setDone(true)
       reset()
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong")
+      console.error("Donation processing error:", err)
+      setError("Failed to process donation. Please try again later.")
     } finally {
       setDonating(false)
     }
